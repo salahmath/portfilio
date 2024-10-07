@@ -34,7 +34,7 @@ function Cert() {
       title: "Web Design",
       institution: "FreeCodeCamp",
       date: "08/10/2023",
-      url: "/public/Capture d’écran 2024-10-07 192307.png",
+      url: "/Capture d’écran 2024-10-07 192307.png",
       description:
         "A certification that focuses on modern web design techniques, including responsive and accessible design.",
     },
@@ -61,7 +61,7 @@ function Cert() {
       title: "Compétence en gestion d'un centre de vote",
       institution: "ISIE",
       date: "01/10/2024",
-      url: "/public/Capture d’écran 2024-10-07 194456.png",
+      url: "/Capture d’écran 2024-10-07 194456.png",
       description:
         "Certification délivrée par l'Instance Supérieure Indépendante pour les Élections (ISIE), démontrant des compétences en gestion d'un centre de vote lors des élections.",
     },
