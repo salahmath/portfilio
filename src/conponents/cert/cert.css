@@ -1,0 +1,205 @@
+main.cert {
+    gap: 2.64rem;
+    display: flex;
+    align-items: start;
+  }
+  
+  main .left-section3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  main .left-section3 button {
+    background-color: rgba(36, 37, 46, 1);
+    width: 11rem;
+    padding: 0.75rem 0;
+    text-align: center;
+    font-style: 1.05rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    opacity: 0.5;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+  
+  main .left-section3 button:hover {
+    opacity: 1;
+  }
+  main.cert .left-section3 button.btn1 {
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    border: 2px solid rgba(252, 144, 144, 0.5);
+  }
+  .light main .left-section3 button.btn1 {
+    border: 2px solid #000;
+   
+  }
+  
+  .cert .card {
+    border: 1px solid rgba(93, 188, 252, 0.3);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-image: linear-gradient(
+      rgb(92 220 180 / 24%),
+      rgba(252, 144, 144, 0.5)
+    );
+  }
+  .animation1{
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 12px;
+    display: flex;
+    transition: 0.4s;
+
+  }
+
+  .animation2{
+    flex-direction: column;
+    gap:0rem;
+    display: flex;
+    margin-bottom: -12px;
+    margin-top: -12px;
+    padding: -10px;
+    transition: 0.4s;
+  }
+
+  .light .animation1{
+    color: var(--title);
+
+  }
+
+  .light .animation2{
+    color: var(--title);
+  }
+
+  @media (max-width: 600px) {
+    .animation1{
+      height: 0;
+    width: 0;
+    opacity: 0;
+      
+    }
+  
+    .animation2{
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+  
+  }
+  
+
+  .light .card{
+      border: none;
+      box-shadow: -1px 1px #0000003f ;
+      box-shadow: 1px 1px #0000003f ;
+  }.light .card:hover{
+      border: none;
+      background-color: rgb(248,248,248);
+  }
+  .card:hover {
+    border: 1px solid var(--blue);
+    scale: 1.2;
+    rotate: 2deg;
+    cursor: pointer;
+  }
+  .card img {
+    border: 1px solid rgba(93, 188, 252, 0.3);
+  }
+  .card .box {
+    padding: 1rem 0.4rem;
+  }
+  .card .box h1 {
+    color: var(--title);
+    text-transform: capitalize;
+    -webkit-line-clamp: 1; /* Limite à 3 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis; 
+  }
+  .card .box p {
+    color: var(--subtitle);
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+    -webkit-line-clamp: 3; /* Limite à 3 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis; /* Ajoute les points de suspension */
+  }
+  .card .box .icons {
+    justify-content: space-between;
+  }
+  .card .box .icons .logos {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .card .box .icons .logos .icon-share {
+    color: white;
+    border-radius: 50px;
+    transition: 0.4s;
+  }
+  .card .box .icons .logos .icon-git {
+    color: white;
+    border-radius: 50px;
+    transition: 0.4s;
+  }
+  
+  .card .box .icons .logos .icon-share:hover {
+    color: rgb(0, 255, 26);
+    scale: 1.2;
+  }
+  .card .box .icons .logos .icon-git:hover {
+    scale: 1.2;
+  
+    color: rgb(0, 255, 26);
+  }
+  
+  .card .box .icons .logos .icon-share:active {
+    scale: 0.7;
+  }
+  .card .box .icons .logos .icon-git:active {
+    scale: 0.7;
+  }
+  
+  .card .box .icons span {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 12px;
+    transition: 0.2s;
+  }
+  
+  .card .box .icons span:hover {
+    scale: 1.1;
+  }
+  
+  .right-section3 {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 600px) {
+    main.flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    main .left-section3.flex {
+      flex-direction: row;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  

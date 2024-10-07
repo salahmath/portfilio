@@ -1,0 +1,202 @@
+header {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1rem;
+}
+header nav {
+    background-color: var(--bgHeader);
+    padding:0.88rem 2rem;
+    border-radius: 55px;
+    box-shadow: 0px 0px 20px 7px #4b4646;
+    
+ }
+.light header nav {
+    background-color: var(--bgHeader);
+    padding:0.88rem 2rem;
+    border-radius: 55px;
+    box-shadow: 0px 0px 20px 0px #d3cfcf;
+    
+ }
+header ul {
+    gap: 16px;
+}
+.menu{
+    display: none;
+}
+
+
+header ul li a{
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+header ul li a:hover{
+    color: var(--blue);
+    opacity: 1;
+    font-size: 0.9rem;
+ 
+}
+
+header .GrMenu , header .BsMoon{
+    background-color: var(--bgHeader);
+    border-radius: 50px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    transition: 0.3s;
+    height: 1.7rem;cursor: pointer;
+    width: 1.7rem;
+}
+header .GrMenu:hover , header .BsMoon:hover{
+    transition: 0.3s;
+   
+    border: 1px solid rgb(255,165,0);
+    cursor: pointer;
+}
+
+header .GrMenu:active , header .BsMoon:active{
+    transition: 0.3s;
+   cursor: pointer;
+scale: 0.7;    
+}
+
+header .RiSunLine{
+    background-color: var(--bgHeader);
+    border-radius: 50px;
+    padding: 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+    height: 1.7rem;
+    width: 1.7rem;
+    color: rgb(255,165,0);cursor: pointer;
+}
+header .RiSunLine:hover{
+   
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+ header .RiSunLine:active{
+   cursor: pointer;
+scale: 0.7;    
+}
+
+
+header .GrMenu{
+    background-color: var(--bgHeader);
+    border-radius: 50px;
+    padding: 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+    height: 1.7rem;
+    width: 1.7rem;
+    color: rgb(255, 255, 255);cursor: pointer;
+}
+
+header .GrMenu:hover{
+   
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+ header .GrMenu:active{
+   cursor: pointer;
+scale: 0.7;    
+}
+
+
+.light header .GrMenu{
+    background-color: var(--bgHeader);
+    border-radius: 50px;
+    padding: 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+    height: 1.7rem;
+    width: 1.7rem;
+    color: rgb(0, 0, 0);cursor: pointer;
+}
+
+.light header .GrMenu:hover{
+   
+    border: 1px solid var(--blue);
+    cursor: pointer;
+}
+
+ .light header .GrMenu:active{
+   cursor: pointer;
+scale: 0.7;    
+}
+
+
+
+header button{
+    font-style: 1.2rem;
+}
+.MdClear:hover{
+    cursor: pointer;
+    color: red;
+    rotate: 180deg;
+}
+.MdClear{ 
+    font-size: 1.6rem;
+    color: var(--bgHeader);
+transition: 0.4s;
+}
+
+.light .MdClear:hover{
+    cursor: pointer;
+    color: red;
+    rotate: 180deg;
+}
+.light .MdClear{ 
+    font-size: 1.6rem;
+    color: var(--blue);
+transition: 0.4s;
+}
+
+header .fixed{
+    position: fixed;
+    inset: 0;
+    background-color: rgb(65 63 63 / 91%);
+    ;
+}
+@keyframes myanimation {
+    0% {scale: 0;}
+    60% {scale: 1.1;}
+    100% {scale: 1;}
+}
+header .fixed ul{
+    animation: myanimation 1s 1 ;
+    width: 80%;
+    margin-left:  auto;
+    margin-right:  auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+}
+
+header .fixed ul li{
+   border-bottom: 1px solid var(--border);
+   padding-bottom: 0.8rem;
+   padding-top: 0.5rem;
+}
+header .fixed ul li a{
+   font-size:1rem ;
+ }
+ 
+header .fixed ul li:last-child{
+   border: none;
+ }
+@media (max-width:700px){
+    header nav,.div_veli {
+        display: none;
+    }
+    .menu{
+     display: block;
+    }
+    .menu2{
+        margin-left: 90%;
+    }
+
+}

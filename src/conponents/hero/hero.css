@@ -1,0 +1,173 @@
+
+
+section.hero{
+    display: flex;
+    margin-top: 13px;
+}
+section .left-section{
+    flex-grow: 1;
+}
+
+
+
+section .left-section img{
+    width: 88px;
+    border-radius: 50px;
+    border: 1px solid rgb(76, 95, 99);    ;
+    padding: 4px;
+    box-shadow: 2px 2px 20px 7px rgb(162 252 252) inset;
+}
+.light section .left-section img{
+    width: 88px;
+    border-radius: 50px;
+    border: none;
+    padding: 4px;
+    box-shadow: 2px 2px 20px 7px rgb(180, 191, 191) inset;
+}
+
+section span .MdVerified{
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-left: 10px;
+    margin-top: 60px;
+}
+
+.left-section .title{
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin: 24px 0;
+    color: var(--title);
+}
+
+.left-section .desc{
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+    margin-bottom:  20px;
+    color: var(--subtitle);
+}
+section .left-section .link{
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1.5rem;
+}
+/* Couleur du logo Facebook */
+section .left-section .fcb {
+    color: #1877F2; /* Bleu Facebook */
+    transition: 0.4s;
+    cursor: pointer;
+    border: 1px solid rgb(255, 199, 199);
+    border-radius: 20px;
+}
+
+/* Couleur du logo Instagram */
+section .left-section .insta {
+    color: #E4405F; /* Rose Instagram */
+    transition: 0.4s;
+    cursor: pointer;
+    border: 1px solid rgb(255, 199, 199);
+    border-radius: 20px;
+
+}
+
+/* Couleur du logo GitHub */
+section .left-section .git {
+    color: #ffffff; /* Gris GitHub */
+    transition: 0.4s;
+    cursor: pointer;
+    border: 1px solid rgb(255, 199, 199);
+    border-radius: 20px;
+
+}
+.light section .left-section .git {
+    color: #000000; /* Gris GitHub */
+    transition: 0.4s;
+    cursor: pointer;
+    border: 1px solid rgb(255, 199, 199);
+    border-radius: 20px;
+
+}
+/* Couleur du logo LinkedIn */
+section .left-section .link .link {
+    color: #0A66C2; /* Bleu LinkedIn */
+    transition: 0.4s;
+    cursor: pointer;
+    border: 1px solid rgb(255, 199, 199);
+    border-radius: 20px;
+
+}
+
+section .left-section .fcb:active {
+   
+    scale: 0.7;    
+    border: 1px solid #1877F2;
+
+    }
+
+    section .left-section .insta:active {
+        scale: 0.7;    
+        border: 1px solid #E4405F ;
+    }
+    
+    /* Couleur du logo GitHub */
+    section .left-section .git:active {
+        scale: 0.7;    
+        border: 1px solid #000;
+
+    }
+    
+    /* Couleur du logo LinkedIn */
+    section .left-section .link .link:active {
+        scale: 0.7;    
+        border: 1px solid #0A66C2;
+
+    }
+
+    section .left-section .fcb:hover {
+   
+        scale: 0.8;    
+        border: 1px solid #1877F2;
+    
+        }
+    
+        section .left-section .insta:hover {
+            scale: 0.8;    
+            border: 1px solid #E4405F ;
+        }
+        
+        /* Couleur du logo GitHub */
+        section .left-section .git:hover {
+            scale: 0.8;    
+            border: 1px solid #000;
+    
+        }
+        
+        /* Couleur du logo LinkedIn */
+        section .left-section .link .link:hover {
+            scale: 0.8;    
+            border: 1px solid #0A66C2;
+    
+        }
+
+        
+        section .right-section {
+            width: 2000px;
+            margin-top: 80px;
+          }
+          
+          section .right-section .lottie {
+            width: 100%;
+            translate: 100px 10px;
+          }
+          
+          @media (max-width: 1250px) {
+            section .right-section {
+              display: none;
+            }
+          }
+          
+          @media (min-width: 1440px) {
+            section .right-section {
+                width: 80%;
+                translate: 1px 10px            }
+          }
+          
