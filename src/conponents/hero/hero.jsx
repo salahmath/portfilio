@@ -1,5 +1,7 @@
 import React from "react";
 import "./hero.css";
+import ReactTypingEffect from 'react-typing-effect';
+
 import { MdVerified } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io";
@@ -20,40 +22,55 @@ function Hero() {
           </span>
         </div>
         <div className="title">
-          <h1>Full Stack Developer</h1>
-        </div>
+        <ReactTypingEffect
+        text={["Full Stack developer","Web developer", "Mobile developer"]}
+        speed={100}
+        eraseSpeed={50}
+        typingDelay={500}
+        eraseDelay={1000}
+      />        </div>
         <div className="desc">
           <p>
-            Développeur Junior Full Stack avec une solide expertise en MERN
-            stack, je suis passionné par les nouvelles technologies et à la
-            recherche d'un travail qui me permettra de mettre en pratique mes
-            compétences et de continuer à apprendre. Je suis particulièrement
-            intéressé par des opportunités qui offrent des défis techniques et
-            une croissance professionnelle continue.
+            Salah Mathlouthi, a junior web and mobile developer passionate about
+            creating dynamic applications. Always eager to learn, I work with
+            modern technologies to deliver efficient and intuitive solutions.
           </p>
         </div>
         <div className="link">
-  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-    <FaFacebook className="fcb" />
-  </a>
-  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-    <IoLogoInstagram className="insta" />
-  </a>
-  <a href="https://github.com/ton-profil" target="_blank" rel="noopener noreferrer">
-    <IoLogoGithub className="git" />
-  </a>
-  <a href="https://www.linkedin.com/in/salah-mathlouthi-583593288" target="_blank" rel="noopener noreferrer">
-    <IoLogoLinkedin className="link" />
-  </a>
-</div>
-
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook className="fcb" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoLogoInstagram className="insta" />
+          </a>
+          <a
+            href="https://github.com/ton-profil"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoLogoGithub className="git" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/salah-mathlouthi-583593288"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoLogoLinkedin className="link" />
+          </a>
+        </div>
       </div>
-      <div className="right-section flex"> 
-      <div className="lottie">
-       <Lottie animationData={groovyWalkAnimation} loop={true}
-       />
-       </div>
-
+      <div className="right-section flex">
+        <div className="lottie">
+          <Lottie animationData={groovyWalkAnimation} loop={true} />
+        </div>
       </div>
     </section>
   );

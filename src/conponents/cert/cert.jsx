@@ -79,7 +79,7 @@ function Cert() {
     <main id="Certification" className="flex cert">
       <div className="left-section3 flex">
         <div className="animation2 flex">
-          <h1 style={{ textAlign: "center" }}>My Certification</h1>
+          <h1 className="typing" style={{ textAlign: "center" }}>My Certification</h1>
           <Lottie
             animationData={groovyWalkAnimation}
             loop={true}

@@ -58,10 +58,10 @@ function Header() {
         <div className="fixed">
           <ul className="model">
             <MdClear className="menu2 MdClear" onClick={toggleVisibility} />
-            <li><a href="#Home">Home</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#Certification">Certification</a></li>
-          <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Home" onClick={toggleVisibility} >Home</a></li>
+          <li><a href="#Projects" onClick={toggleVisibility} >Projects</a></li>
+          <li><a href="#Certification" onClick={toggleVisibility} >Certification</a></li>
+          <li><a href="#Contact" onClick={toggleVisibility} >Contact</a></li>
           </ul>
         </div>
       )}

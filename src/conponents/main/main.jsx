@@ -46,7 +46,7 @@ function Main() {
     <main id="Projects" className="flex ">
       <div className="left-section1 flex">
       <div className="animation1 flex">
-      <h1>
+      <h1 className="typing">
 My Projects
          </h1>
          <Lottie
