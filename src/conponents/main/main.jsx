@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./main.CSS";
+import "./main.css";
 import { IoLogoGithub } from "react-icons/io5";
 import { FiLink2 } from "react-icons/fi";
 import { BsArrowRightShort } from "react-icons/bs";
