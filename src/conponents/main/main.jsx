@@ -16,74 +16,99 @@ function Main() {
     {
       id: 1,
       title: "Pixi-media",
-      category: ["react", "bootstrap"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      category: ["React", "Bootstrap"],
+      url: "/ixe.png",
+      git: "https://github.com/salahmath/pixi-salah.git",
       description:
-        "A media management platform built with React and Bootstrap, allowing users to upload and share media content easily.",
+        "This React web application offers a user-friendly interface allowing users to search, display, and manage images and videos using dedicated APIs. It leverages the powerful features of React to ensure a smooth and dynamic user experience.",
     },
     {
-      id: 2,
-      title: "Authentification JWT",
-      category: ["react", "bootstrap", "Node", "MongoDB", "Express"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      id: 10,
+      title: "JWT Authentication",
+      category: ["React", "Bootstrap", "Node", "MongoDB", "Express"],
+      url: "https://themewagon.com/wp-content/uploads/2021/06/3.gif",
+      git: "https://github.com/salahmath/Initiale_MERN.git",
       description:
-        "A secure authentication system using JSON Web Tokens (JWT) for user authentication in a MERN stack application.",
+        "Development of a complete web application using the MERN stack (MongoDB, Express.js, React, Node.js) with a secure authentication system based on JSON Web Tokens (JWT). This project enabled the creation of a modern web application with robust authentication management.",
+    },
+    ,
+    {
+      id: 2,
+      title: "Message application",
+      category: ["React", "Bootstrap", "Node", "MongoDB", "Express","CSS"],
+      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      git: "https://github.com/salahmath/message.git",
+
+      description:
+        "Development of a complete web application using the MERN stack (MongoDB, Express.js, React, Node.js) with a secure authentication system based on JSON Web Tokens (JWT). This project enabled the creation of a modern web application with robust authentication management.",
     },
     {
       id: 3,
-      title: "CRUD avec Laravel",
+      title: "CRUD with Laravel",
       category: ["Laravel", "CSS", "PHP", "MySQL"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      url: "https://images.ctfassets.net/23aumh6u8s0i/5c2LVJHpVFgNW12LvVSnCg/a789ce83982ed4e63baff797495fc342/laravel-6-crud-app",
+      git: "https://github.com/salahmath/laravel_crud.git",
+
       description:
-        "A CRUD application built with Laravel, showcasing a user-friendly interface for managing data in a MySQL database.",
+        "Design and development of a CRUD management system for a blog application using Laravel. This project implemented a full-featured blog post management interface.",
     },
     {
       id: 4,
-      title: "Frontend E-Commerce Administration",
-      category: ["react", "bootstrap", "CSS"],
+      title: "E-Commerce Admin Panel",
+      category: ["React", "Bootstrap", "CSS"],
       url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      git: "https://github.com/salahmath/admin-frontend.git",
+
       description:
-        "An admin panel for managing an e-commerce platform, built using React and Bootstrap for responsive design.",
+        "Development of an admin panel for an e-commerce platform. This interface, built with React and Bootstrap, allows managing products, orders, and users. It is optimized for a seamless user experience and efficient sales management.",
     },
     {
       id: 5,
-      title: "Frontend E-Commerce Client",
-      category: ["react", "bootstrap", "CSS"],
+      title: "E-Commerce Client App",
+      category: ["React", "Bootstrap", "CSS"],
       url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      git: "https://github.com/salahmath/client-frontend.git",
       description:
-        "A user-friendly frontend for an e-commerce site, built with React and styled with Bootstrap.",
+        "Development of a client-side application for an e-commerce platform. The app allows users to browse, search, and purchase products online, offering a responsive and user-friendly shopping experience powered by React and Bootstrap.",
     },
     {
       id: 6,
-      title: "Backend E-Commerce",
+      title: "E-Commerce Backend API",
       category: ["Node", "MongoDB", "Express"],
       url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      git: "https://github.com/salahmath/pfe-Backend.git",
       description:
-        "The backend of an e-commerce platform using Node.js, Express, and MongoDB for data management.",
+        "Development of the backend for an e-commerce platform, using Node.js, Express, and MongoDB. This backend handles transactions, users, and products, ensuring security and efficiency in sales operations.",
     },
     {
       id: 7,
       title: "AgriAdvisorPro",
-      category: ["react", "bootstrap", "CSS", "Node", "MongoDB", "Express"],
+      category: ["Firebase", "Flutter"],
       url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      git: "https://github.com/salahmath/AgriAdvisorPro.git",
+
       description:
-        "A web application providing agricultural advice and resources, developed with a MERN stack.",
+        "AgriAdvisorPro is a Flutter application integrated with Firebase, designed to help orange tree owners select and purchase medications for their trees. Users can browse a catalog of medications, add products to their cart, make payments, and track their orders. The app simplifies orange tree care management and enhances their health through a user-friendly and secure approach.",
     },
     {
       id: 8,
       title: "BusTun",
-      category: ["react", "bootstrap", "CSS"],
+      category: ["React", "Bootstrap", "CSS"],
       url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      git: "https://github.com/Karimselmi/BusTimeTun.git",
+
       description:
-        "An application designed for bus tracking and management, built using React and Bootstrap.",
+        "Dynamic website for checking bus schedules and purchasing tickets online.",
     },
     {
       id: 9,
       title: "Guapofood",
       category: ["HTML", "PHP", "CSS"],
       url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      git: "100000000000000000000",
+
       description:
-        "A food delivery platform built with HTML, PHP, and CSS, providing users with a seamless ordering experience.",
+        "Dynamic website for browsing food prices and easily purchasing meals online.",
     },
   ];
 
@@ -145,6 +170,18 @@ function Main() {
             >
               <div style={{ width: "230px" }} className="box">
                 {hoveredId === item.id ? (
+                  <>
+                  <div className="flex icons">
+                      <div className="logos">
+                        <FiLink2 className="icon-share" />
+                         <a href={item.git} className="more">
+                         <IoLogoGithub className="icon-git" />
+                      </a>
+                      </div>
+                     
+                    </div>
+
+
                   <TypingEffect
                     text={item.title + " : " + item.description}
                     speed={20} // Fast typing speed
@@ -157,13 +194,15 @@ function Main() {
                       padding: "20px",
                       margin: "10px",
                       lineHeight: "1.5rem", // Corrected property
-                      textAlign:"start",
+                      textAlign: "start",
                       paddingLeft: "1px",
                     }}
                     cursorShowTime={100}
                     cursorHideTime={200}
                     className="description"
                   />
+                  
+                  </>
                 ) : (
                   <>
                     <img width={230} src={item.url} alt={item.title} />
@@ -173,16 +212,15 @@ function Main() {
                     <div className="flex icons">
                       <div className="logos">
                         <FiLink2 className="icon-share" />
-                        <IoLogoGithub className="icon-git" />
-                      </div>
-                      <a href="#" className="more">
-                        <span>
-                          more <BsArrowRightShort />
-                        </span>
+                         <a href={item.git} className="more">
+                         <IoLogoGithub className="icon-git" />
                       </a>
+                      </div>
+                     
                     </div>
                   </>
                 )}
+                
               </div>
             </motion.article>
           ))}

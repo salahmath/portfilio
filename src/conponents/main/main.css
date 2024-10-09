@@ -67,6 +67,7 @@ main .left-section1 button.btn1 {
 }
 .card img {
   border: 1px solid rgba(93, 188, 252, 0.3);
+  width: 215px;
 }
 .card .box {
   padding: 1rem 0.4rem;
@@ -139,6 +140,20 @@ main .left-section1 button.btn1 {
   margin-right: 12px;
   transition: 0.2s;
 }
+
+
+.light .card .box .icons .logos .icon-share {
+  color: var(--title);
+  border-radius: 50px;
+  transition: 0.4s;
+}
+.light .card .box .icons .logos .icon-git {
+  color: var(--title);
+  border-radius: 50px;
+  transition: 0.4s;
+}
+
+
 
 .card .box .icons span:hover {
   scale: 1.1;
