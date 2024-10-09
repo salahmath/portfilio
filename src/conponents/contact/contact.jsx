@@ -51,6 +51,8 @@ function Contact() {
       });
   };
 
+
+  
   return (
     <section id="Contact" className="contact flex">
     <div>

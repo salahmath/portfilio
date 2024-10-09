@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "./cert.css";
-import { IoLogoGithub } from "react-icons/io5";
-import { FiLink2 } from "react-icons/fi";
-import { BsArrowRightShort } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../../../public/ani/7.json";
+import TypingEffect from "react-typing-effect"; // Importer la bibliothèque
 
 function Cert() {
   const [filter, setFilter] = useState("");
-
+  const [hoveredId, setHoveredId] = useState(null);
   const certifications = [
     {
       id: 1,
@@ -63,13 +61,13 @@ function Cert() {
       date: "01/10/2024",
       url: "/Capture d’écran 2024-10-07 194456.png",
       description:
-        "Certification délivrée par l'Instance Supérieure Indépendante pour les Élections (ISIE), démontrant des compétences en gestion d'un centre de vote lors des élections.",
-    },
+      "Certification issued by the Independent Higher Authority for Elections (ISIE), demonstrating skills in managing a polling center during elections."
+        },
   ];
 
   const institutions = [
     ...new Set(certifications.map((cert) => cert.institution)),
-  ]; // Récupère les institutions uniques
+  ];
 
   const filteredCertifications = certifications.filter(
     (cert) => filter === "" || cert.institution === filter
@@ -78,14 +76,14 @@ function Cert() {
   return (
     <main id="Certification" className="flex cert">
       <div className="left-section3 flex">
-        <div className="animation2 flex">
-          <h1 className="typing" style={{ textAlign: "center" }}>My Certification</h1>
-          <Lottie
-            animationData={groovyWalkAnimation}
-            loop={true}
-            style={{ height: 200, flexGrow: 1 }}
-          />
-        </div>
+        <h1 className="typing" style={{ textAlign: "center" }}>
+          My Certification
+        </h1>
+        <Lottie
+          animationData={groovyWalkAnimation}
+          loop={true}
+          style={{ height: 200, flexGrow: 1 }}
+        />
         <button
           onClick={() => setFilter("")}
           className={filter === "" ? "btn1" : ""}
@@ -107,8 +105,9 @@ function Cert() {
         <AnimatePresence>
           {filteredCertifications.map((item) => (
             <motion.article
+              key={item.id}
               layout
-              initial={{ scale: 0, opacity: 0 }} // Ajouter une animation d'opacité
+              initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{
@@ -117,14 +116,31 @@ function Cert() {
                 damping: 15,
                 duration: 0.5,
               }}
-              key={item.id}
               className="card"
+              onMouseEnter={() => setHoveredId(item.id)}
+              onMouseLeave={() => setHoveredId(null)}
             >
-              <img width={230} src={item.url} alt={item.url} />
-              <div style={{ width: "230px" }} className="box">
-                <h1>{item.title}</h1>
-                <p>{item.date}</p>
-              </div>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                <img width={230} src={item.url} alt={item.title} />
+                <div style={{ width: "230px" }} className="box">
+                  {hoveredId === item.id ? (
+                    <TypingEffect
+                      text={item.description}
+                      speed={20} // Fast typing speed
+                      eraseSpeed={10}
+                      cursor={false}
+                      cursorShowTime={100}
+                      cursorHideTime={200}
+                      className="description"
+                    />
+                  ) : (
+                    <>
+                      <h1>{item.title}</h1>
+                      <p>{item.date}</p>
+                    </>
+                  )}
+                </div>
+              </a>
             </motion.article>
           ))}
         </AnimatePresence>

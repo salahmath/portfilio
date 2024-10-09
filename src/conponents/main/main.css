@@ -37,6 +37,10 @@ main .left-section1 button.btn1 {
  
 }
 
+
+
+
+
 .card {
   border: 1px solid rgba(93, 188, 252, 0.3);
   transition: 0.3s;
@@ -121,6 +125,9 @@ main .left-section1 button.btn1 {
 }
 .card .box .icons .logos .icon-git:active {
   scale: 0.7;
+}
+ .right-section2  .description{
+  color: var(--blue);
 }
 
 .card .box .icons span {

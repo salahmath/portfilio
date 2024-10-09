@@ -11,6 +11,8 @@ main.cert {
     align-items: center;
   }
   
+/* red */
+
   main .left-section3 button {
     background-color: rgba(36, 37, 46, 1);
     width: 11rem;
@@ -31,7 +33,7 @@ main.cert {
     opacity: 1;
     font-weight: bold;
     letter-spacing: 0.6px;
-    border: 2px solid rgba(252, 144, 144, 0.5);
+    border: 2px solid rgb(247, 169, 169);
   }
   .light main .left-section3 button.btn1 {
     border: 2px solid #000;
@@ -47,6 +49,12 @@ main.cert {
       rgba(252, 144, 144, 0.5)
     );
   }
+  .right-section3 .description {
+    color: var(--title); /* ou toute autre couleur */
+    font-size: 0.9rem; /* ajustez la taille selon vos préférences */
+    margin-top: 0.5rem;
+  }
+  
   .animation1{
     flex-direction: column;
     gap: 1.2rem;
@@ -200,6 +208,26 @@ main.cert {
       gap: 10px;
       flex-wrap: wrap;
       justify-content: center;
+    }
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #333; /* Couleur du texte */
+    font-weight: normal; /* Poids de la police */
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 2px; /* Largeur du curseur */
+    height: 20px; /* Hauteur du curseur */
+    background: black; /* Couleur du curseur */
+    animation: blink 1s step-start infinite; /* Animation de clignotement */
+  }
+  
+  @keyframes blink {
+    50% {
+      background: transparent; /* Clignoter */
     }
   }
   

@@ -38,21 +38,21 @@ function Hero() {
         </div>
         <div className="link">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/mathl.mkachakh/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaFacebook className="fcb" />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/salah_mathlouthi0/profilecard/?igsh=MTF3aTFnMnVudHc4NQ=="
             target="_blank"
             rel="noopener noreferrer"
           >
             <IoLogoInstagram className="insta" />
           </a>
           <a
-            href="https://github.com/ton-profil"
+            href="https://github.com/salahmath"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -75,5 +75,4 @@ function Hero() {
     </section>
   );
 }
-
 export default Hero;
