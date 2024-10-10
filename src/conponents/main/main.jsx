@@ -23,21 +23,11 @@ function Main() {
         "This React web application offers a user-friendly interface allowing users to search, display, and manage images and videos using dedicated APIs. It leverages the powerful features of React to ensure a smooth and dynamic user experience.",
     },
     {
-      id: 10,
-      title: "JWT Authentication",
-      category: ["React", "Bootstrap", "Node", "MongoDB", "Express"],
-      url: "https://themewagon.com/wp-content/uploads/2021/06/3.gif",
-      git: "https://github.com/salahmath/Initiale_MERN.git",
-      description:
-        "Development of a complete web application using the MERN stack (MongoDB, Express.js, React, Node.js) with a secure authentication system based on JSON Web Tokens (JWT). This project enabled the creation of a modern web application with robust authentication management.",
-    },
-    ,
-    {
       id: 2,
       title: "Message application",
       category: ["React", "Bootstrap", "Node", "MongoDB", "Express","CSS"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
-      git: "https://github.com/salahmath/message.git",
+      url: "https://themewagon.com/wp-content/uploads/2021/06/3.gif",
+      git: "https://github.com/salahmath/Initiale_MERN.git",
 
       description:
         "Development of a complete web application using the MERN stack (MongoDB, Express.js, React, Node.js) with a secure authentication system based on JSON Web Tokens (JWT). This project enabled the creation of a modern web application with robust authentication management.",
@@ -56,7 +46,7 @@ function Main() {
       id: 4,
       title: "E-Commerce Admin Panel",
       category: ["React", "Bootstrap", "CSS"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      url: "/abcde.png",
       git: "https://github.com/salahmath/admin-frontend.git",
 
       description:
@@ -66,7 +56,7 @@ function Main() {
       id: 5,
       title: "E-Commerce Client App",
       category: ["React", "Bootstrap", "CSS"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      url: "/abcd.png",
       git: "https://github.com/salahmath/client-frontend.git",
       description:
         "Development of a client-side application for an e-commerce platform. The app allows users to browse, search, and purchase products online, offering a responsive and user-friendly shopping experience powered by React and Bootstrap.",
@@ -75,7 +65,7 @@ function Main() {
       id: 6,
       title: "E-Commerce Backend API",
       category: ["Node", "MongoDB", "Express"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      url: "https://miro.medium.com/v2/resize:fit:600/0*_PPcWzOsiq8Imzff.jpg",
       git: "https://github.com/salahmath/pfe-Backend.git",
       description:
         "Development of the backend for an e-commerce platform, using Node.js, Express, and MongoDB. This backend handles transactions, users, and products, ensuring security and efficiency in sales operations.",
@@ -104,8 +94,8 @@ function Main() {
       id: 9,
       title: "Guapofood",
       category: ["HTML", "PHP", "CSS"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
-      git: "100000000000000000000",
+      url: "/guoappo.png",
+      git: "https://github.com/salahmath/GuapoFood-.git",
 
       description:
         "Dynamic website for browsing food prices and easily purchasing meals online.",
