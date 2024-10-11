@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./hero.css";
-import ReactTypingEffect from 'react-typing-effect';
+import ReactTypingEffect from "react-typing-effect";
 
 import { MdVerified } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
@@ -9,26 +9,72 @@ import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io";
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../../../public/ani/5.json";
+import { PoweroffOutlined } from "@ant-design/icons";
+import { Button, Flex } from "antd";
+import { FaDownload } from "react-icons/fa";
 
 function Hero() {
+  const [loadings, setLoadings] = useState([]); // Manage loading states for multiple buttons
+
+  // Function to trigger loading state and download
+  const enterLoading = (index) => {
+    // Set the loading state for the button
+    setLoadings((prevLoadings) => {
+      const newLoadings = [...prevLoadings];
+      newLoadings[index] = true;
+      return newLoadings;
+    });
+
+    // After 1000 ms, stop loading and trigger the resume download
+    setTimeout(() => {
+      setLoadings((prevLoadings) => {
+        const newLoadings = [...prevLoadings];
+        newLoadings[index] = false;
+        return newLoadings;
+      });
+
+      // Trigger the download programmatically
+      const link = document.createElement("a");
+      link.href = "/resume.pdf"; // Path to your resume file
+      link.download = "resume.pdf"; // Name for the downloaded file
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 1000); // 1 second delay
+  };
+
   return (
     <section id="Home" className="hero">
       <div className="left-section  ">
         <div className="image navbar">
           <img src="/salah.png" alt="hero" />
-          <span>
-            {" "}
-            <MdVerified className="MdVerified" />
-          </span>
+          <div>
+            <span className="resu">
+              {" "}
+              <MdVerified className="MdVerified" />
+              <Flex gap="small" className="flexi" vertical>
+                <Flex gap="small" wrap>
+                  <Button
+                    type="primary"
+                    loading={loadings[0]}
+                    onClick={() => enterLoading(0)}
+                  >
+                    Resume <FaDownload className="res" />
+                  </Button>
+                </Flex>
+              </Flex>
+            </span>
+          </div>
         </div>
         <div className="title">
-        <ReactTypingEffect
-        text={["Full Stack developer","Web developer", "Mobile developer"]}
-        speed={100}
-        eraseSpeed={50}
-        typingDelay={500}
-        eraseDelay={1000}
-      />        </div>
+          <ReactTypingEffect
+            text={["Full Stack developer", "Web developer", "Mobile developer"]}
+            speed={100}
+            eraseSpeed={50}
+            typingDelay={500}
+            eraseDelay={1000}
+          />{" "}
+        </div>
         <div className="desc">
           <p>
             Salah Mathlouthi, a junior web and mobile developer passionate about
