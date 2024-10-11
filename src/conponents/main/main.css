@@ -49,6 +49,8 @@ main .left-section1 button.btn1 {
     rgb(92 220 180 / 24%),
     rgb(167 167 167 / 50%)
   );
+  padding: 10px; /* Add padding to the card */
+  max-width: 250px; /* Set a maximum width */
 }
 
 .light .card{
@@ -178,4 +180,12 @@ main .left-section1 button.btn1 {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+
+.description1{
+  color: white !important;
+}
+
+.light .description1{
+  color: var(--title) !important;
 }

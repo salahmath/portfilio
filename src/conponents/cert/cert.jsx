@@ -75,7 +75,8 @@ function Cert() {
 
   return (
     <main id="Certification" className="flex cert">
-      <div className="left-section3 flex">
+      <div className="left-section3  flex">
+      <div className="animation1">
         <h1 className="typing" style={{ textAlign: "center" }}>
           My Certification
         </h1>
@@ -84,6 +85,8 @@ function Cert() {
           loop={true}
           style={{ height: 200, flexGrow: 1 }}
         />
+        </div>
+        <div className="left-section3">
         <button
           onClick={() => setFilter("")}
           className={filter === "" ? "btn1" : ""}
@@ -99,8 +102,9 @@ function Cert() {
             {institution}
           </button>
         ))}
-      </div>
-
+</div>
+        </div>
+        
       <div className="right-section3 flex">
         <AnimatePresence>
           {filteredCertifications.map((item) => (

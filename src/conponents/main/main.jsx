@@ -7,41 +7,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import groovyWalkAnimation from "../../../public/ani/6.json";
 import Lottie from "lottie-react";
 import TypingEffect from "react-typing-effect"; // Importer la bibliothèque
+import { message } from "antd";
 
 function Main() {
   const [colone, setColone] = useState("");
   const [hoveredId, setHoveredId] = useState(null);
+  const [copiedId, setCopiedId] = useState(null); // État pour stocker l'ID copié
 
   const myprojects = [
-    {
-      id: 1,
-      title: "Pixi-media",
-      category: ["React", "Bootstrap"],
-      url: "/ixe.png",
-      git: "https://github.com/salahmath/pixi-salah.git",
-      description:
-        "This React web application offers a user-friendly interface allowing users to search, display, and manage images and videos using dedicated APIs. It leverages the powerful features of React to ensure a smooth and dynamic user experience.",
-    },
-    {
-      id: 2,
-      title: "Message application",
-      category: ["React", "Bootstrap", "Node", "MongoDB", "Express","CSS"],
-      url: "https://themewagon.com/wp-content/uploads/2021/06/3.gif",
-      git: "https://github.com/salahmath/Initiale_MERN.git",
-
-      description:
-        "Development of a complete web application using the MERN stack (MongoDB, Express.js, React, Node.js) with a secure authentication system based on JSON Web Tokens (JWT). This project enabled the creation of a modern web application with robust authentication management.",
-    },
-    {
-      id: 3,
-      title: "CRUD with Laravel",
-      category: ["Laravel", "CSS", "PHP", "MySQL"],
-      url: "https://images.ctfassets.net/23aumh6u8s0i/5c2LVJHpVFgNW12LvVSnCg/a789ce83982ed4e63baff797495fc342/laravel-6-crud-app",
-      git: "https://github.com/salahmath/laravel_crud.git",
-
-      description:
-        "Design and development of a CRUD management system for a blog application using Laravel. This project implemented a full-featured blog post management interface.",
-    },
     {
       id: 4,
       title: "E-Commerce Admin Panel",
@@ -72,19 +45,47 @@ function Main() {
     },
     {
       id: 7,
-      title: "AgriAdvisorPro",
-      category: ["Firebase", "Flutter"],
+      title: "Mobile Application for Online Job Search",
+      category: ["React Native"],
       url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
       git: "https://github.com/salahmath/AgriAdvisorPro.git",
+      description:
+        "A mobile application that allows candidates to search for job opportunities online and apply directly. The interface is intuitive and optimized for easy navigation and job searching.",
+    },
+    {
+      id: 1,
+      title: "Pixi-media",
+      category: ["React", "Bootstrap"],
+      url: "/ixe.png",
+      git: "https://github.com/salahmath/pixi-salah.git",
+      description:
+        "This React web application offers a user-friendly interface allowing users to search, display, and manage images and videos using dedicated APIs. It leverages the powerful features of React to ensure a smooth and dynamic user experience.",
+    },
+    {
+      id: 2,
+      title: "Message application",
+      category: ["React", "Bootstrap", "Node", "MongoDB", "Express", "CSS"],
+      url: "https://themewagon.com/wp-content/uploads/2021/06/3.gif",
+      git: "https://github.com/salahmath/Initiale_MERN.git",
 
       description:
-        "AgriAdvisorPro is a Flutter application integrated with Firebase, designed to help orange tree owners select and purchase medications for their trees. Users can browse a catalog of medications, add products to their cart, make payments, and track their orders. The app simplifies orange tree care management and enhances their health through a user-friendly and secure approach.",
+        "Development of a complete web application using the MERN stack (MongoDB, Express.js, React, Node.js) with a secure authentication system based on JSON Web Tokens (JWT). This project enabled the creation of a modern web application with robust authentication management.",
+    },
+    {
+      id: 3,
+      title: "CRUD with Laravel",
+      category: ["Laravel", "CSS", "PHP", "MySQL"],
+      url: "https://images.ctfassets.net/23aumh6u8s0i/5c2LVJHpVFgNW12LvVSnCg/a789ce83982ed4e63baff797495fc342/laravel-6-crud-app",
+      git: "https://github.com/salahmath/laravel_crud.git",
+
+      description:
+        "Design and development of a CRUD management system for a blog application using Laravel. This project implemented a full-featured blog post management interface.",
     },
     {
       id: 8,
       title: "BusTun",
       category: ["React", "Bootstrap", "CSS"],
-      url: "https://www.hawkdivemedia.com/wp-content/uploads/2022/09/Home.jpg",
+      url: "/bus.png",
       git: "https://github.com/Karimselmi/BusTimeTun.git",
 
       description:
@@ -101,7 +102,16 @@ function Main() {
         "Dynamic website for browsing food prices and easily purchasing meals online.",
     },
   ];
-
+  const copyToClipboard = (url) => {
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {
+        alert("URL copiée dans le presse-papiers!"); // Notification (optionnelle)
+      })
+      .catch((err) => {
+        console.error("Échec de la copie : ", err);
+      });
+  };
   const filtered = myprojects.filter(
     (item) => colone === "" || item.category.some((cat) => cat === colone)
   );
@@ -110,6 +120,12 @@ function Main() {
   const institutions = [
     ...new Set(myprojects.flatMap((project) => project.category)),
   ];
+
+  const handleCopyId = (id) => {
+    navigator.clipboard.writeText(id);
+    setCopiedId(id);
+    message.success("URL copiée dans le presse-papiers!");
+  };
 
   return (
     <main id="Projects" className="flex">
@@ -161,37 +177,42 @@ function Main() {
               <div style={{ width: "230px" }} className="box">
                 {hoveredId === item.id ? (
                   <>
-                  <div className="flex icons">
+                    <img width={230} src={item.url} alt={item.title} />
+                    <div style={{
+                      padding: "5px",
+                    }}></div>
+                    <div className="flex icons">
                       <div className="logos">
-                        <FiLink2 className="icon-share" />
-                         <a href={item.git} className="more">
-                         <IoLogoGithub className="icon-git" />
-                      </a>
+                        <FiLink2
+                          onClick={() => handleCopyId(item.git)}
+                          className="icon-share"
+                        />
+                        <a href={item.git} className="more">
+                          <IoLogoGithub className="icon-git" />
+                        </a>
                       </div>
-                     
                     </div>
 
-
-                  <TypingEffect
-                    text={item.title + " : " + item.description}
-                    speed={20} // Fast typing speed
-                    eraseSpeed={10}
-                    cursor={false}
-                    style={{
-                      fontFamily: "Arial, sans-serif",
-                      fontSize: "12px",
-                      color: "#212121",
-                      padding: "20px",
-                      margin: "10px",
-                      lineHeight: "1.5rem", // Corrected property
-                      textAlign: "start",
-                      paddingLeft: "1px",
-                    }}
-                    cursorShowTime={100}
-                    cursorHideTime={200}
-                    className="description"
-                  />
-                  
+                    <TypingEffect
+                      text={item.title + " : " + item.description}
+                      speed={20} // Fast typing speed
+                      eraseSpeed={10}
+                      cursor={false}
+                      style={{
+                        fontFamily: "Arial, sans-serif",
+                        fontSize: "12px",
+                        color: "gray",
+                        padding: "20px",
+                        margin: "10px",
+                        lineHeight: "1.5rem", // Corrected property
+                        textAlign: "start",
+                        paddingLeft: "1px",
+                        paddingRight: "10px",
+                      }}
+                      cursorShowTime={100}
+                      cursorHideTime={200}
+                      className="description1"
+                    />
                   </>
                 ) : (
                   <>
@@ -202,15 +223,13 @@ function Main() {
                     <div className="flex icons">
                       <div className="logos">
                         <FiLink2 className="icon-share" />
-                         <a href={item.git} className="more">
-                         <IoLogoGithub className="icon-git" />
-                      </a>
+                        <a href={item.git} className="more">
+                          <IoLogoGithub className="icon-git" />
+                        </a>
                       </div>
-                     
                     </div>
                   </>
                 )}
-                
               </div>
             </motion.article>
           ))}
