@@ -45,7 +45,7 @@ function Hero() {
 
   return (
     <section id="Home" className="hero">
-      <div className="left-section  ">
+      <div className="left-section ">
         <div className="image navbar">
           <img src="/salah.png" alt="hero" />
           <div>

@@ -204,7 +204,6 @@ section .right-section .lottie {
 
 .flexi{
   color: var(--title) !important;
-
   transition: 0.4s;
 }
 .flexi:hover{
@@ -234,3 +233,6 @@ background: none;
   padding: 10px !important;
 }
 
+:where(.css-dev-only-do-not-override-vryruh).ant-btn {
+  position: static;
+}
