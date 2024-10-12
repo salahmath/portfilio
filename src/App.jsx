@@ -7,7 +7,6 @@ import Hero from "./conponents/hero/hero";
 import Main from "./conponents/main/main";
 import { IoIosArrowRoundUp } from "react-icons/io";
 import Cert from "./conponents/cert/cert";
-
 function App() {
   const [dark, setDark] = useState("light"); // Set initial state
   const [button, setButton] = useState(false); // Set initial state
