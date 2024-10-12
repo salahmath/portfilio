@@ -234,5 +234,5 @@ background: none;
 }
 
 :where(.css-dev-only-do-not-override-vryruh).ant-btn {
-  position: static;
+  position: static !important;
 }
