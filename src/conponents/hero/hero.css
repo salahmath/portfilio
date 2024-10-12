@@ -211,28 +211,28 @@ scale: 1.1 !important;
 rotate: 2deg !important;
 background: none !important;
 }
-.light :where(.css-dev-only-do-not-override-vryruh).ant-btn-variant-solid {
+.light :where(.css-vryruh).ant-btn-variant-solid {
   color: var(--subtitle) !important;
   background: none !important;
 }
-:where(.css-dev-only-do-not-override-vryruh).ant-btn-variant-solid {
+:where(.css-vryruh).ant-btn-variant-solid {
   color: #fff !important;
   background: none !important;
   padding: 10px !important;
 }
 
-:where(.css-dev-only-do-not-override-vryruh).ant-btn-variant-solid:hover {
+:where(.css-vryruh).ant-btn-variant-solid:hover {
   color: #fff !important;
   background: var(--blue) !important;
   padding: 10px !important;
 }
 
-.light :where(.css-dev-only-do-not-override-vryruh).ant-btn-variant-solid:hover {
+.light :where(.css-vryruh).ant-btn-variant-solid:hover {
   color: #fff !important;
   background: var(--blue) !important;
   padding: 10px !important;
 }
 
-:where(.css-dev-only-do-not-override-vryruh).ant-btn {
+:where(.css-vryruh).ant-btn {
   position: static !important;
 }
