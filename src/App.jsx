@@ -7,9 +7,13 @@ import Hero from "./conponents/hero/hero";
 import Main from "./conponents/main/main";
 import { IoIosArrowRoundUp } from "react-icons/io";
 import Cert from "./conponents/cert/cert";
+
+import Lottie from "lottie-react";
+import loadingAnimation from "../public/ani/12.json"; 
 function App() {
   const [dark, setDark] = useState("light"); // Set initial state
   const [button, setButton] = useState(false); // Set initial state
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +31,29 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []); // Empty dependency array to run only once on mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Changer l'état de chargement après 1000 ms
+      setIsVisible(true); // Rendre le contenu visible après le chargement
+    }, 2000); // Délai de 1000 ms
+
+    return () => clearTimeout(timer); // Nettoyer le timer si le composant est démonté
+  }, []);
 
   return (
+    <>
+    {isLoading ? (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <Lottie animationData={loadingAnimation} loop={true} />
+      </div>
+    ) : (
     <div id="header" className="container">
       <Header />
       <Hero />
@@ -48,6 +73,8 @@ function App() {
       </a>
       
     </div>
+    )}
+    </>
   );
 }
 
